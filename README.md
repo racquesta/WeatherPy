@@ -43,6 +43,17 @@ from datetime import datetime
 
 
 ```python
+####DATA IS SAVED TO CSV AND CODE TO IMPORT IS UNDER API PULLS###
+
+# Google Api key
+gkey = 'AIzaSyDehYwx_mkgNA8qUnS6a4XqALdqaChXwis' #key has been disabled
+
+# Open weather API key
+wkey = '3c995f5860f5c2480a49b210cc497c1e' #key has been disabled
+```
+
+
+```python
 # Build data frame of randomly generated lat and long
 location_data = pd.DataFrame()
 location_data['rand_lat'] = [np.random.uniform(-90,90) for x in range(1500)]
@@ -410,12 +421,6 @@ len(no_id)
     106
 
 
-
-
-```python
-# Google Api key
-gkey = 'AIzaSyDehYwx_mkgNA8qUnS6a4XqALdqaChXwis'
-```
 
 
 ```python
@@ -1024,12 +1029,6 @@ len(no_coord)
 ```python
 #leave merged_df the same from here on
 weather_data = merged_df.copy()
-```
-
-
-```python
-# Open weather API key
-wkey = '3c995f5860f5c2480a49b210cc497c1e'
 ```
 
 
@@ -5092,12 +5091,13 @@ weather_data.dtypes
 
 ```python
 #Export to csv
-weather_data.to_csv('clean_weather_data.csv')
+weather_data.to_csv('Data_Output/clean_weather_data.csv')
 ```
 
 
 ```python
-weather_data = pd.read_csv('clean_weather_data.csv')
+# Data CSV read to avoid pull requests again
+weather_data = pd.read_csv('Data_Output/clean_weather_data.csv')
 weather_data.head()
 ```
 
@@ -5326,19 +5326,19 @@ for temp in temp_list:
     plt.ylabel("Temperature (F)")
     plt.scatter(xvals, yvals)
     plt.show()
-    plt.savefig("%s vs Latitude" % (labels_dic[temp]))
+    plt.savefig("Graph_Output/%s vs Latitude.png" % (labels_dic[temp]))
 ```
 
 
-![png](output_35_0.png)
+![png](Images/output_34_0.png)
 
 
 
-![png](output_35_1.png)
+![png](Images/output_34_1.png)
 
 
 
-![png](output_35_2.png)
+![png](Images/output_34_2.png)
 
 
 
@@ -5358,19 +5358,19 @@ for hum in hum_list:
     plt.text(1,20,'Equator',rotation=90)
     plt.scatter(xvals, yvals)
     plt.show()
-    plt.savefig("%s vs Latitude" % (labels_dic[hum]))
+    plt.savefig("Graph_Output/%s vs Latitude.png" % (labels_dic[hum]))
 ```
 
 
-![png](output_36_0.png)
+![png](Images/output_35_0.png)
 
 
 
-![png](output_36_1.png)
+![png](Images/output_35_1.png)
 
 
 
-![png](output_36_2.png)
+![png](Images/output_35_2.png)
 
 
 
@@ -5391,19 +5391,19 @@ for clo in cloud_list:
     plt.text(-5,-20,'Equator')
     plt.scatter(xvals, yvals)
     plt.show()
-    plt.savefig("%s vs Latitude" % (labels_dic[clo]))
+    plt.savefig("Graph_Output/%s vs Latitude.png" % (labels_dic[clo]))
 ```
 
 
-![png](output_37_0.png)
+![png](Images/output_36_0.png)
 
 
 
-![png](output_37_1.png)
+![png](Images/output_36_1.png)
 
 
 
-![png](output_37_2.png)
+![png](Images/output_36_2.png)
 
 
 
@@ -5424,19 +5424,19 @@ for win in win_list:
     plt.text(1,35,'Equator',rotation=90)
     plt.scatter(xvals, yvals)
     plt.show()
-    plt.savefig("%s vs Latitude" % (labels_dic[win]))
+    plt.savefig("Graph_Output/%s vs Latitude.png" % (labels_dic[win]))
 ```
 
 
-![png](output_38_0.png)
+![png](Images/output_37_0.png)
 
 
 
-![png](output_38_1.png)
+![png](Images/output_37_1.png)
 
 
 
-![png](output_38_2.png)
+![png](Images/output_37_2.png)
 
 
 
@@ -5465,31 +5465,31 @@ for measure in size_list:
                 alpha = .5, 
                 cmap=plt.cm.RdYlGn_r)
     plt.show()
-    plt.savefig("Global Temperatures Based on 5 Day Average Bubble Plot: %s" % (measure))
+    plt.savefig("Graph_Output/Global Temperatures Based on 5 Day Average Bubble Plot: %s.png" % (measure))
 ```
 
 
-    <matplotlib.figure.Figure at 0x11ffe4f98>
+    <matplotlib.figure.Figure at 0x121540f28>
 
 
 
-![png](output_39_1.png)
+![png](Images/output_38_1.png)
 
 
 
-    <matplotlib.figure.Figure at 0x11fc0c3c8>
+    <matplotlib.figure.Figure at 0x121642048>
 
 
 
-![png](output_39_3.png)
+![png](Images/output_38_3.png)
 
 
 
-    <matplotlib.figure.Figure at 0x12004ee80>
+    <matplotlib.figure.Figure at 0x121510fd0>
 
 
 
-![png](output_39_5.png)
+![png](Images/output_38_5.png)
 
 
 
