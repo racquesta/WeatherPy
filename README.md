@@ -28,6 +28,13 @@ This dataset is limited by the sampling time span.  Historical data might give a
 
 
 ```python
+#### DATA SAVED TO CSV.  CODE TO IMPORT IS UNDER PULLS ###
+
+# if missing, pip install unidecode
+```
+
+
+```python
 # Dependencies
 import numpy as np
 import pandas as pd
@@ -43,7 +50,6 @@ from datetime import datetime
 
 
 ```python
-####DATA IS SAVED TO CSV AND CODE TO IMPORT IS UNDER API PULLS###
 
 # Google Api key
 gkey = 'AIzaSyDehYwx_mkgNA8qUnS6a4XqALdqaChXwis' #key has been disabled
@@ -5096,9 +5102,9 @@ weather_data.to_csv('Data_Output/clean_weather_data.csv')
 
 
 ```python
-# Data CSV read to avoid pull requests again
-weather_data = pd.read_csv('Data_Output/clean_weather_data.csv')
-weather_data.head()
+########## Data CSV read to avoid pull requests again  ########
+# weather_data = pd.read_csv('Data_Output/clean_weather_data.csv')
+# weather_data.head()
 ```
 
 
@@ -5330,15 +5336,15 @@ for temp in temp_list:
 ```
 
 
-![png](Images/output_34_0.png)
+![png](Images/output_35_0.png)
 
 
 
-![png](Images/output_34_1.png)
+![png](Images/output_35_1.png)
 
 
 
-![png](Images/output_34_2.png)
+![png](Images/output_35_2.png)
 
 
 
@@ -5362,15 +5368,15 @@ for hum in hum_list:
 ```
 
 
-![png](Images/output_35_0.png)
+![png](Images/output_36_0.png)
 
 
 
-![png](Images/output_35_1.png)
+![png](Images/output_36_1.png)
 
 
 
-![png](Images/output_35_2.png)
+![png](Images/output_36_2.png)
 
 
 
@@ -5395,15 +5401,15 @@ for clo in cloud_list:
 ```
 
 
-![png](Images/output_36_0.png)
+![png](Images/output_37_0.png)
 
 
 
-![png](Images/output_36_1.png)
+![png](Images/output_37_1.png)
 
 
 
-![png](Images/output_36_2.png)
+![png](Images/output_37_2.png)
 
 
 
@@ -5428,15 +5434,15 @@ for win in win_list:
 ```
 
 
-![png](Images/output_37_0.png)
+![png](Images/output_38_0.png)
 
 
 
-![png](Images/output_37_1.png)
+![png](Images/output_38_1.png)
 
 
 
-![png](Images/output_37_2.png)
+![png](Images/output_38_2.png)
 
 
 
@@ -5473,7 +5479,7 @@ for measure in size_list:
 
 
 
-![png](Images/output_38_1.png)
+![png](Images/output_39_1.png)
 
 
 
@@ -5481,7 +5487,7 @@ for measure in size_list:
 
 
 
-![png](Images/output_38_3.png)
+![png](Images/output_39_3.png)
 
 
 
@@ -5489,7 +5495,7 @@ for measure in size_list:
 
 
 
-![png](Images/output_38_5.png)
+![png](Images/output_39_5.png)
 
 
 
